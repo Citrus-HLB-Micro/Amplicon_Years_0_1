@@ -13,7 +13,7 @@ fi
 module load amptk
 module load usearch
 
-BASE=ECDRE_Y0_1_OTU
+BASE=ECDRE_Y0_1_OTU_CA_only.20240501
 
 #Change this to match your data folder name
 INPUT=input
