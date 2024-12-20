@@ -1,0 +1,47 @@
+[05/03/24 07:08:17]: /opt/linux/rocky/8.x/x86_64/pkgs/amptk/1.6/bin/amptk taxonomy -f ECDRE_Y0_1_ASV_FLonly_20240501.cluster.otus.fa -i ECDRE_Y0_1_ASV_FLonly_20240501.cluster.otu_table.txt -d ITS1 -o ECDRE_Y0_1_ASV_FLonly_20240501.OTU.UNITE_ITS1 --cpus 48
+
+[05/03/24 07:08:17]: OS: Rocky Linux 8.8, 256 cores, ~ 1057 GB RAM. Python: 3.10.0
+[05/03/24 07:08:17]: Python Modules: numpy v1.24.2, pandas v1.5.3, matplotlib v3.7.1, psutil v5.9.4, natsort v8.3.1, biopython v1.81, edlib v1.3.9, biom-format v2.1.14
+[05/03/24 07:08:17]: AMPtk v1.6.0, VSEARCH v2.22.1
+[05/03/24 07:08:17]: Loading FASTA Records
+[05/03/24 07:08:17]: 19,713 OTUs
+[05/03/24 07:08:17]: Global alignment OTUs with usearch_global (VSEARCH) against ITS.udb
+[05/03/24 07:08:17]: vsearch --usearch_global ECDRE_Y0_1_ASV_FLonly_20240501.cluster.otus.fa --db /bigdata/operations/pkgadmin/opt/linux/centos/8.x/x86_64/pkgs/amptk/1.6/lib/python3.10/site-packages/amptk/DB/ITS.udb --userout ECDRE_Y0_1_ASV_FLonly_20240501.OTU.UNITE_ITS1.usearch.txt --id 0.7 --strand both --output_no_hits --maxaccepts 500 --top_hits_only --userfields query+target+id --notrunclabels --threads 48
+[05/03/24 07:09:00]: vsearch v2.22.1_linux_x86_64, 1007.7GB RAM, 256 cores
+https://github.com/torognes/vsearch
+
+Reading UDB file /bigdata/operations/pkgadmin/opt/linux/centos/8.x/x86_64/pkgs/amptk/1.6/lib/python3.10/site-packages/amptk/DB/ITS.udb 100%
+Reorganizing data in memory 100%
+Creating bitmaps 100%
+Parsing abundances 100%
+1376309086 nt in 4133329 seqs, min 100, max 6778, avg 333
+Searching 100%
+Matching unique query sequences: 6638 of 19713 (33.67%)
+
+[05/03/24 07:09:00]: Classifying OTUs with SINTAX (VSEARCH)
+[05/03/24 07:09:00]: vsearch --sintax ECDRE_Y0_1_ASV_FLonly_20240501.cluster.otus.fa --db /bigdata/operations/pkgadmin/opt/linux/centos/8.x/x86_64/pkgs/amptk/1.6/lib/python3.10/site-packages/amptk/DB/ITS1_SINTAX.udb --tabbedout ECDRE_Y0_1_ASV_FLonly_20240501.OTU.UNITE_ITS1.sintax.txt -sintax_cutoff 0.8 --threads 48 --notrunclabels
+[05/03/24 07:09:25]: vsearch v2.22.1_linux_x86_64, 1007.7GB RAM, 256 cores
+https://github.com/torognes/vsearch
+
+Reading UDB file /bigdata/operations/pkgadmin/opt/linux/centos/8.x/x86_64/pkgs/amptk/1.6/lib/python3.10/site-packages/amptk/DB/ITS1_SINTAX.udb 100%
+Reorganizing data in memory 100%
+Creating bitmaps 100%
+Parsing abundances 100%
+63085060 nt in 221109 seqs, min 100, max 3796, avg 285
+Classifying sequences 100%
+Classified 10334 of 19713 sequences (52.42%)
+
+[05/03/24 07:09:25]: SINTAX results parsed, resulting in 10,297 taxonomy predictions
+[05/03/24 07:09:26]: Global alignment results parsed, resulting in 19,713 taxonomy predictions
+[05/03/24 07:09:26]: Combined OTU taxonomy dictionary contains 19,713 taxonomy predictions
+[05/03/24 07:09:26]: Appending taxonomy to OTU table and OTUs
+[05/03/24 07:09:28]: Generating phylogenetic tree (MAFFT/FastTree)
+[05/03/24 07:09:28]: mafft ECDRE_Y0_1_ASV_FLonly_20240501.cluster.otus.fa
+[05/03/24 07:22:13]: fasttree -nt ECDRE_Y0_1_ASV_FLonly_20240501.OTU.UNITE_ITS1.mafft.fasta
+[05/03/24 08:11:02]: Taxonomy finished: ECDRE_Y0_1_ASV_FLonly_20240501.OTU.UNITE_ITS1.taxonomy.txt
+[05/03/24 08:11:02]: Classic OTU table with taxonomy: ECDRE_Y0_1_ASV_FLonly_20240501.OTU.UNITE_ITS1.otu_table.taxonomy.txt
+[05/03/24 08:11:05]: biom convert -i ECDRE_Y0_1_ASV_FLonly_20240501.cluster.otu_table.txt -o ECDRE_Y0_1_ASV_FLonly_20240501.OTU.UNITE_ITS1.biom.tmp --table-type OTU table --to-json
+[05/03/24 08:11:12]: biom add-metadata -i ECDRE_Y0_1_ASV_FLonly_20240501.OTU.UNITE_ITS1.biom.tmp -o ECDRE_Y0_1_ASV_FLonly_20240501.OTU.UNITE_ITS1.biom --observation-metadata-fp ECDRE_Y0_1_ASV_FLonly_20240501.OTU.UNITE_ITS1.qiime.taxonomy.txt --sc-separated taxonomy --output-as-json
+[05/03/24 08:11:16]: BIOM OTU table created: ECDRE_Y0_1_ASV_FLonly_20240501.OTU.UNITE_ITS1.biom
+[05/03/24 08:11:16]: OTUs with taxonomy: ECDRE_Y0_1_ASV_FLonly_20240501.OTU.UNITE_ITS1.otus.taxonomy.fa
+[05/03/24 08:11:16]: OTU phylogeny: ECDRE_Y0_1_ASV_FLonly_20240501.OTU.UNITE_ITS1.tree.phy
