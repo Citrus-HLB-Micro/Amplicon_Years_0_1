@@ -1,0 +1,1136 @@
+Loading required package: Rcpp
+Loading required package: BiocGenerics
+
+Attaching package: ‘BiocGenerics’
+
+The following objects are masked from ‘package:stats’:
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from ‘package:base’:
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, setdiff, sort,
+    table, tapply, union, unique, unsplit, which.max, which.min
+
+Loading required package: BiocParallel
+Loading required package: Biostrings
+Loading required package: S4Vectors
+Loading required package: stats4
+
+Attaching package: ‘S4Vectors’
+
+The following objects are masked from ‘package:base’:
+
+    expand.grid, I, unname
+
+Loading required package: IRanges
+Loading required package: XVector
+Loading required package: GenomeInfoDb
+
+Attaching package: ‘Biostrings’
+
+The following object is masked from ‘package:base’:
+
+    strsplit
+
+Loading required package: Rsamtools
+Loading required package: GenomicRanges
+Loading required package: GenomicAlignments
+Loading required package: SummarizedExperiment
+Loading required package: MatrixGenerics
+Loading required package: matrixStats
+
+Attaching package: ‘MatrixGenerics’
+
+The following objects are masked from ‘package:matrixStats’:
+
+    colAlls, colAnyNAs, colAnys, colAvgsPerRowSet, colCollapse,
+    colCounts, colCummaxs, colCummins, colCumprods, colCumsums,
+    colDiffs, colIQRDiffs, colIQRs, colLogSumExps, colMadDiffs,
+    colMads, colMaxs, colMeans2, colMedians, colMins, colOrderStats,
+    colProds, colQuantiles, colRanges, colRanks, colSdDiffs, colSds,
+    colSums2, colTabulates, colVarDiffs, colVars, colWeightedMads,
+    colWeightedMeans, colWeightedMedians, colWeightedSds,
+    colWeightedVars, rowAlls, rowAnyNAs, rowAnys, rowAvgsPerColSet,
+    rowCollapse, rowCounts, rowCummaxs, rowCummins, rowCumprods,
+    rowCumsums, rowDiffs, rowIQRDiffs, rowIQRs, rowLogSumExps,
+    rowMadDiffs, rowMads, rowMaxs, rowMeans2, rowMedians, rowMins,
+    rowOrderStats, rowProds, rowQuantiles, rowRanges, rowRanks,
+    rowSdDiffs, rowSds, rowSums2, rowTabulates, rowVarDiffs, rowVars,
+    rowWeightedMads, rowWeightedMeans, rowWeightedMedians,
+    rowWeightedSds, rowWeightedVars
+
+Loading required package: Biobase
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: ‘Biobase’
+
+The following object is masked from ‘package:MatrixGenerics’:
+
+    rowMedians
+
+The following objects are masked from ‘package:matrixStats’:
+
+    anyMissing, rowMedians
+
+[1] "-------------"
+[1] "R 4.2.2"
+[1] "base 4.2.2"
+[1] "Biobase 2.58.0"
+[1] "BiocGenerics 0.44.0"
+[1] "BiocParallel 1.32.5"
+[1] "Biostrings 2.66.0"
+[1] "bitops 1.0.7"
+[1] "cli 3.6.1"
+[1] "codetools 0.2.19"
+[1] "colorspace 2.1.0"
+[1] "compiler 4.2.2"
+[1] "crayon 1.5.2"
+[1] "dada2 1.26.0"
+[1] "datasets 4.2.2"
+[1] "DelayedArray 0.24.0"
+[1] "deldir 1.0.6"
+[1] "fansi 1.0.4"
+[1] "GenomeInfoDb 1.34.8"
+[1] "GenomeInfoDbData 1.2.9"
+[1] "GenomicAlignments 1.34.0"
+[1] "GenomicRanges 1.50.0"
+[1] "ggplot2 3.4.1"
+[1] "glue 1.6.2"
+[1] "graphics 4.2.2"
+[1] "grDevices 4.2.2"
+[1] "grid 4.2.2"
+[1] "gtable 0.3.3"
+[1] "hwriter 1.3.2.1"
+[1] "interp 1.1.3"
+[1] "IRanges 2.32.0"
+[1] "jpeg 0.1.10"
+[1] "lattice 0.20.45"
+[1] "latticeExtra 0.6.30"
+[1] "lifecycle 1.0.3"
+[1] "magrittr 2.0.3"
+[1] "Matrix 1.5.3"
+[1] "MatrixGenerics 1.10.0"
+[1] "matrixStats 0.63.0"
+[1] "methods 4.2.2"
+[1] "munsell 0.5.0"
+[1] "parallel 4.2.2"
+[1] "pillar 1.9.0"
+[1] "pkgconfig 2.0.3"
+[1] "plyr 1.8.8"
+[1] "png 0.1.8"
+[1] "R6 2.5.1"
+[1] "RColorBrewer 1.1.3"
+[1] "Rcpp 1.0.10"
+[1] "RcppParallel 5.1.6"
+[1] "RCurl 1.98.1.10"
+[1] "reshape2 1.4.4"
+[1] "rlang 1.1.0"
+[1] "Rsamtools 2.14.0"
+[1] "S4Vectors 0.36.0"
+[1] "scales 1.2.1"
+[1] "ShortRead 1.56.0"
+[1] "stats 4.2.2"
+[1] "stats4 4.2.2"
+[1] "stringi 1.7.12"
+[1] "stringr 1.5.0"
+[1] "SummarizedExperiment 1.28.0"
+[1] "tibble 3.2.1"
+[1] "tools 4.2.2"
+[1] "utf8 1.2.3"
+[1] "utils 4.2.2"
+[1] "vctrs 0.6.1"
+[1] "XVector 0.38.0"
+[1] "zlibbioc 1.44.0"
+[1] "-------------"
+[1] "Loading Data from folder"
+  [1] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CCCR1R1.fastq"        
+  [2] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CCCR2R1.fastq"        
+  [3] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CCCR3R1.fastq"        
+  [4] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CCCR4R1.fastq"        
+  [5] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CCCT1-S1.fastq"       
+  [6] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CCCT1-S2.fastq"       
+  [7] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CCCT1-S3.fastq"       
+  [8] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CCCT1-S4.fastq"       
+  [9] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CCCT1R1.fastq"        
+ [10] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CCCT1R2.fastq"        
+ [11] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CCCT1R3.fastq"        
+ [12] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CCCT1R4.fastq"        
+ [13] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CCHR1R2.fastq"        
+ [14] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CCHR2R1.fastq"        
+ [15] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CCHR3R1.fastq"        
+ [16] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CCHR4R1.fastq"        
+ [17] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CCHT1-S1.fastq"       
+ [18] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CCHT1-S2.fastq"       
+ [19] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CCHT1-S3.fastq"       
+ [20] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CCHT1-S4.fastq"       
+ [21] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CCHT1R1.fastq"        
+ [22] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CCHT1R2.fastq"        
+ [23] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CCHT1R3.fastq"        
+ [24] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CCHT1R4.fastq"        
+ [25] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CGCR1R1.fastq"        
+ [26] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CGCR2R1.fastq"        
+ [27] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CGCR3R1.fastq"        
+ [28] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CGCR4R1.fastq"        
+ [29] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CGCT1-S1.fastq"       
+ [30] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CGCT1-S2.fastq"       
+ [31] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CGCT1-S3.fastq"       
+ [32] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CGCT1-S4.fastq"       
+ [33] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CGCT1R1.fastq"        
+ [34] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CGCT1R2.fastq"        
+ [35] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CGCT1R3.fastq"        
+ [36] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CGCT1R4.fastq"        
+ [37] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CGHT1-S1.fastq"       
+ [38] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CGHT1-S2.fastq"       
+ [39] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CGHT1-S3.fastq"       
+ [40] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CGHT1-S4.fastq"       
+ [41] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CGHT1R1.fastq"        
+ [42] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CGHT1R2.fastq"        
+ [43] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CGHT1R3.fastq"        
+ [44] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CGHT1R4.fastq"        
+ [45] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-CCC1.fastq"      
+ [46] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-CCC2.fastq"      
+ [47] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-CCC3.fastq"      
+ [48] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-CCC4.fastq"      
+ [49] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-CCH1.fastq"      
+ [50] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-CCH2.fastq"      
+ [51] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-CCH3.fastq"      
+ [52] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-CCH4.fastq"      
+ [53] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-CGC1.fastq"      
+ [54] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-CGC2.fastq"      
+ [55] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-CGC3.fastq"      
+ [56] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-CGC4.fastq"      
+ [57] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-CGH1.fastq"      
+ [58] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-CGH2.fastq"      
+ [59] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-CGH3.fastq"      
+ [60] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-CGH4.fastq"      
+ [61] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-MCC1.fastq"      
+ [62] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-MCC2.fastq"      
+ [63] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-MCC3.fastq"      
+ [64] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-MCC4.fastq"      
+ [65] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-MCH1.fastq"      
+ [66] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-MCH2.fastq"      
+ [67] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-MCH3.fastq"      
+ [68] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-MCH4.fastq"      
+ [69] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-MGC1.fastq"      
+ [70] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-MGC2.fastq"      
+ [71] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-MGC3.fastq"      
+ [72] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-MGC4.fastq"      
+ [73] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-MGH1.fastq"      
+ [74] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-MGH2.fastq"      
+ [75] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-MGH3.fastq"      
+ [76] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-MGH4.fastq"      
+ [77] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-CCC1.fastq"      
+ [78] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-CCC2.fastq"      
+ [79] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-CCC3.fastq"      
+ [80] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-CCC4.fastq"      
+ [81] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-CCH1.fastq"      
+ [82] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-CCH2.fastq"      
+ [83] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-CCH3.fastq"      
+ [84] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-CCH4.fastq"      
+ [85] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-CGC1.fastq"      
+ [86] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-CGC2.fastq"      
+ [87] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-CGC3.fastq"      
+ [88] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-CGC4.fastq"      
+ [89] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-CGH1.fastq"      
+ [90] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-CGH2.fastq"      
+ [91] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-CGH3.fastq"      
+ [92] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-CGH4.fastq"      
+ [93] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-MCC1.fastq"      
+ [94] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-MCC2.fastq"      
+ [95] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-MCC3.fastq"      
+ [96] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-MCC4.fastq"      
+ [97] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-MCH1.fastq"      
+ [98] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-MCH2.fastq"      
+ [99] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-MCH3.fastq"      
+[100] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-MCH4.fastq"      
+[101] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-MGC1.fastq"      
+[102] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-MGC2.fastq"      
+[103] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-MGC3.fastq"      
+[104] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-MGC4.fastq"      
+[105] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-MGH1.fastq"      
+[106] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-MGH2.fastq"      
+[107] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-MGH3.fastq"      
+[108] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-MGH4.fastq"      
+[109] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MCCR1R1.fastq"        
+[110] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MCCR2R1.fastq"        
+[111] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MCCR3R1.fastq"        
+[112] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MCCR4R1.fastq"        
+[113] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MCCT1-S1.fastq"       
+[114] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MCCT1-S2.fastq"       
+[115] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MCCT1-S3.fastq"       
+[116] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MCCT1-S4.fastq"       
+[117] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MCCT1R1.fastq"        
+[118] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MCCT1R2.fastq"        
+[119] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MCCT1R3.fastq"        
+[120] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MCCT1R4.fastq"        
+[121] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MCHR1R1.fastq"        
+[122] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MCHR2R1.fastq"        
+[123] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MCHR3R1.fastq"        
+[124] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MCHR4R1.fastq"        
+[125] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MCHT1-S1.fastq"       
+[126] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MCHT1-S2.fastq"       
+[127] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MCHT1-S3.fastq"       
+[128] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MCHT1-S4.fastq"       
+[129] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MCHT1R1.fastq"        
+[130] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MCHT1R2.fastq"        
+[131] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MCHT1R3.fastq"        
+[132] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MCHT1R4.fastq"        
+[133] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MGCR1R1.fastq"        
+[134] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MGCR2R1.fastq"        
+[135] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MGCR3R1.fastq"        
+[136] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MGCR4R1.fastq"        
+[137] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MGCT1-S2.fastq"       
+[138] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MGCT1-S3.fastq"       
+[139] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MGCT1-S4-REDO.fastq"  
+[140] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MGCT1-S4.fastq"       
+[141] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MGCT1R1.fastq"        
+[142] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MGCT1R2.fastq"        
+[143] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MGCT1R3.fastq"        
+[144] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MGCT1R4.fastq"        
+[145] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MGHR1R1.fastq"        
+[146] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MGHR2R1.fastq"        
+[147] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MGHR2R2.fastq"        
+[148] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MGHR4R1.fastq"        
+[149] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MGHT1-S1.fastq"       
+[150] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MGHT1-S2.fastq"       
+[151] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MGHT1-S3.fastq"       
+[152] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MGHT1-S4.fastq"       
+[153] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MGHT1R1.fastq"        
+[154] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MGHT1R2.fastq"        
+[155] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MGHT1R3.fastq"        
+[156] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MGHT1R4.fastq"        
+[157] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool1-D01.fastq"  
+[158] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool1-D02.fastq"  
+[159] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool1-D03.fastq"  
+[160] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool1-D04.fastq"  
+[161] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool1-D05.fastq"  
+[162] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool1-D06.fastq"  
+[163] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool1-D07.fastq"  
+[164] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool1-D08.fastq"  
+[165] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool1-P01.fastq"  
+[166] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool1-P02.fastq"  
+[167] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool1-P03.fastq"  
+[168] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool1-P04.fastq"  
+[169] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool1-P05.fastq"  
+[170] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool1-P06.fastq"  
+[171] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool2-D09.fastq"  
+[172] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool2-D10.fastq"  
+[173] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool2-D11.fastq"  
+[174] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool2-D12.fastq"  
+[175] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool2-P07.fastq"  
+[176] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool2-P08.fastq"  
+[177] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool2-P14.fastq"  
+[178] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool3-P11.fastq"  
+[179] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool3-P13.fastq"  
+[180] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool3-P15.fastq"  
+[181] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool4-D13.fastq"  
+[182] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool4-D14.fastq"  
+[183] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool4-D15.fastq"  
+[184] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool4-P09.fastq"  
+[185] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool4-P10.fastq"  
+[186] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool4-P12.fastq"  
+[187] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool4-P16.fastq"  
+[188] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool4-P17.fastq"  
+[189] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Pos-Pool1-D01.fastq"  
+[190] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Pos-Pool1-D02.fastq"  
+[191] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Pos-Pool1-D03.fastq"  
+[192] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Pos-Pool1-D04.fastq"  
+[193] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Pos-Pool2-D05-2.fastq"
+[194] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Pos-Pool2-D05.fastq"  
+[195] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Pos-Pool2-D06.fastq"  
+[196] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Pos-Pool2-D07.fastq"  
+[197] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Pos-Pool2-D08.fastq"  
+[198] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Pos-Pool3-D03.fastq"  
+[199] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Pos-Pool3-D09-2.fastq"
+[200] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Pos-Pool3-D11.fastq"  
+[201] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Pos-Pool4-D02.fastq"  
+[202] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Pos-Pool4-D05.fastq"  
+[203] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Pos-Pool4-D06.fastq"  
+[204] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Pos-Pool4-D09.fastq"  
+[205] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T0-CCH1.fastq"      
+[206] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T0-CCH2.fastq"      
+[207] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T0-CCH3.fastq"      
+[208] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T0-CCH4.fastq"      
+[209] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T0-CGC1.fastq"      
+[210] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T0-CGC2.fastq"      
+[211] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T0-CGC3.fastq"      
+[212] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T0-CGC4.fastq"      
+[213] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T0-CGH1.fastq"      
+[214] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T0-CGH2.fastq"      
+[215] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T0-CGH3.fastq"      
+[216] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T0-CGH4.fastq"      
+[217] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T0-MCC1.fastq"      
+[218] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T0-MCC2.fastq"      
+[219] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T0-MCC3.fastq"      
+[220] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T0-MCC4.fastq"      
+[221] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T0-MCH1.fastq"      
+[222] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T0-MCH2.fastq"      
+[223] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T0-MCH3.fastq"      
+[224] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T0-MCH4.fastq"      
+[225] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T0-MGC1.fastq"      
+[226] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T0-MGC2.fastq"      
+[227] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T0-MGC3.fastq"      
+[228] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T0-MGC4.fastq"      
+[229] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T0-MGH1.fastq"      
+[230] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T0-MGH2.fastq"      
+[231] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T0-MGH3.fastq"      
+[232] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T0-MGH4.fastq"      
+[233] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-CCC1.fastq"      
+[234] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-CCC2.fastq"      
+[235] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-CCC3.fastq"      
+[236] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-CCC4.fastq"      
+[237] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-CCH1.fastq"      
+[238] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-CCH2.fastq"      
+[239] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-CCH3.fastq"      
+[240] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-CCH4.fastq"      
+[241] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-CGC1.fastq"      
+[242] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-CGC2.fastq"      
+[243] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-CGC3.fastq"      
+[244] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-CGC4.fastq"      
+[245] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-CGH1.fastq"      
+[246] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-CGH2.fastq"      
+[247] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-CGH3.fastq"      
+[248] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-CGH4.fastq"      
+[249] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-MCC1.fastq"      
+[250] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-MCC2.fastq"      
+[251] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-MCC3.fastq"      
+[252] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-MCC4.fastq"      
+[253] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-MCH1.fastq"      
+[254] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-MCH2.fastq"      
+[255] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-MCH3.fastq"      
+[256] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-MCH4.fastq"      
+[257] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-MGC1.fastq"      
+[258] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-MGC2.fastq"      
+[259] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-MGC3.fastq"      
+[260] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-MGC4.fastq"      
+[261] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-MGH1.fastq"      
+[262] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-MGH2.fastq"      
+[263] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-MGH3.fastq"      
+[264] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-MGH4.fastq"      
+[265] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Soil1-1-T0.fastq"     
+[266] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Soil1-2-T0.fastq"     
+[267] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Soil2-1-T0.fastq"     
+[268] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Soil2-2-T0.fastq"     
+[269] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Soil3-1-T0.fastq"     
+[270] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Soil3-2-T0.fastq"     
+[271] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Soil4-1-T0.fastq"     
+[272] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Soil4-2-T0.fastq"     
+[273] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Soil5-1-T0.fastq"     
+[274] "ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Soil5-2-T0.fastq"     
+  [1] "CCCR1R1"         "CCCR2R1"         "CCCR3R1"         "CCCR4R1"        
+  [5] "CCCT1-S1"        "CCCT1-S2"        "CCCT1-S3"        "CCCT1-S4"       
+  [9] "CCCT1R1"         "CCCT1R2"         "CCCT1R3"         "CCCT1R4"        
+ [13] "CCHR1R2"         "CCHR2R1"         "CCHR3R1"         "CCHR4R1"        
+ [17] "CCHT1-S1"        "CCHT1-S2"        "CCHT1-S3"        "CCHT1-S4"       
+ [21] "CCHT1R1"         "CCHT1R2"         "CCHT1R3"         "CCHT1R4"        
+ [25] "CGCR1R1"         "CGCR2R1"         "CGCR3R1"         "CGCR4R1"        
+ [29] "CGCT1-S1"        "CGCT1-S2"        "CGCT1-S3"        "CGCT1-S4"       
+ [33] "CGCT1R1"         "CGCT1R2"         "CGCT1R3"         "CGCT1R4"        
+ [37] "CGHT1-S1"        "CGHT1-S2"        "CGHT1-S3"        "CGHT1-S4"       
+ [41] "CGHT1R1"         "CGHT1R2"         "CGHT1R3"         "CGHT1R4"        
+ [45] "L-T0-CCC1"       "L-T0-CCC2"       "L-T0-CCC3"       "L-T0-CCC4"      
+ [49] "L-T0-CCH1"       "L-T0-CCH2"       "L-T0-CCH3"       "L-T0-CCH4"      
+ [53] "L-T0-CGC1"       "L-T0-CGC2"       "L-T0-CGC3"       "L-T0-CGC4"      
+ [57] "L-T0-CGH1"       "L-T0-CGH2"       "L-T0-CGH3"       "L-T0-CGH4"      
+ [61] "L-T0-MCC1"       "L-T0-MCC2"       "L-T0-MCC3"       "L-T0-MCC4"      
+ [65] "L-T0-MCH1"       "L-T0-MCH2"       "L-T0-MCH3"       "L-T0-MCH4"      
+ [69] "L-T0-MGC1"       "L-T0-MGC2"       "L-T0-MGC3"       "L-T0-MGC4"      
+ [73] "L-T0-MGH1"       "L-T0-MGH2"       "L-T0-MGH3"       "L-T0-MGH4"      
+ [77] "L-T1-CCC1"       "L-T1-CCC2"       "L-T1-CCC3"       "L-T1-CCC4"      
+ [81] "L-T1-CCH1"       "L-T1-CCH2"       "L-T1-CCH3"       "L-T1-CCH4"      
+ [85] "L-T1-CGC1"       "L-T1-CGC2"       "L-T1-CGC3"       "L-T1-CGC4"      
+ [89] "L-T1-CGH1"       "L-T1-CGH2"       "L-T1-CGH3"       "L-T1-CGH4"      
+ [93] "L-T1-MCC1"       "L-T1-MCC2"       "L-T1-MCC3"       "L-T1-MCC4"      
+ [97] "L-T1-MCH1"       "L-T1-MCH2"       "L-T1-MCH3"       "L-T1-MCH4"      
+[101] "L-T1-MGC1"       "L-T1-MGC2"       "L-T1-MGC3"       "L-T1-MGC4"      
+[105] "L-T1-MGH1"       "L-T1-MGH2"       "L-T1-MGH3"       "L-T1-MGH4"      
+[109] "MCCR1R1"         "MCCR2R1"         "MCCR3R1"         "MCCR4R1"        
+[113] "MCCT1-S1"        "MCCT1-S2"        "MCCT1-S3"        "MCCT1-S4"       
+[117] "MCCT1R1"         "MCCT1R2"         "MCCT1R3"         "MCCT1R4"        
+[121] "MCHR1R1"         "MCHR2R1"         "MCHR3R1"         "MCHR4R1"        
+[125] "MCHT1-S1"        "MCHT1-S2"        "MCHT1-S3"        "MCHT1-S4"       
+[129] "MCHT1R1"         "MCHT1R2"         "MCHT1R3"         "MCHT1R4"        
+[133] "MGCR1R1"         "MGCR2R1"         "MGCR3R1"         "MGCR4R1"        
+[137] "MGCT1-S2"        "MGCT1-S3"        "MGCT1-S4-REDO"   "MGCT1-S4"       
+[141] "MGCT1R1"         "MGCT1R2"         "MGCT1R3"         "MGCT1R4"        
+[145] "MGHR1R1"         "MGHR2R1"         "MGHR2R2"         "MGHR4R1"        
+[149] "MGHT1-S1"        "MGHT1-S2"        "MGHT1-S3"        "MGHT1-S4"       
+[153] "MGHT1R1"         "MGHT1R2"         "MGHT1R3"         "MGHT1R4"        
+[157] "Neg-Pool1-D01"   "Neg-Pool1-D02"   "Neg-Pool1-D03"   "Neg-Pool1-D04"  
+[161] "Neg-Pool1-D05"   "Neg-Pool1-D06"   "Neg-Pool1-D07"   "Neg-Pool1-D08"  
+[165] "Neg-Pool1-P01"   "Neg-Pool1-P02"   "Neg-Pool1-P03"   "Neg-Pool1-P04"  
+[169] "Neg-Pool1-P05"   "Neg-Pool1-P06"   "Neg-Pool2-D09"   "Neg-Pool2-D10"  
+[173] "Neg-Pool2-D11"   "Neg-Pool2-D12"   "Neg-Pool2-P07"   "Neg-Pool2-P08"  
+[177] "Neg-Pool2-P14"   "Neg-Pool3-P11"   "Neg-Pool3-P13"   "Neg-Pool3-P15"  
+[181] "Neg-Pool4-D13"   "Neg-Pool4-D14"   "Neg-Pool4-D15"   "Neg-Pool4-P09"  
+[185] "Neg-Pool4-P10"   "Neg-Pool4-P12"   "Neg-Pool4-P16"   "Neg-Pool4-P17"  
+[189] "Pos-Pool1-D01"   "Pos-Pool1-D02"   "Pos-Pool1-D03"   "Pos-Pool1-D04"  
+[193] "Pos-Pool2-D05-2" "Pos-Pool2-D05"   "Pos-Pool2-D06"   "Pos-Pool2-D07"  
+[197] "Pos-Pool2-D08"   "Pos-Pool3-D03"   "Pos-Pool3-D09-2" "Pos-Pool3-D11"  
+[201] "Pos-Pool4-D02"   "Pos-Pool4-D05"   "Pos-Pool4-D06"   "Pos-Pool4-D09"  
+[205] "R-T0-CCH1"       "R-T0-CCH2"       "R-T0-CCH3"       "R-T0-CCH4"      
+[209] "R-T0-CGC1"       "R-T0-CGC2"       "R-T0-CGC3"       "R-T0-CGC4"      
+[213] "R-T0-CGH1"       "R-T0-CGH2"       "R-T0-CGH3"       "R-T0-CGH4"      
+[217] "R-T0-MCC1"       "R-T0-MCC2"       "R-T0-MCC3"       "R-T0-MCC4"      
+[221] "R-T0-MCH1"       "R-T0-MCH2"       "R-T0-MCH3"       "R-T0-MCH4"      
+[225] "R-T0-MGC1"       "R-T0-MGC2"       "R-T0-MGC3"       "R-T0-MGC4"      
+[229] "R-T0-MGH1"       "R-T0-MGH2"       "R-T0-MGH3"       "R-T0-MGH4"      
+[233] "R-T1-CCC1"       "R-T1-CCC2"       "R-T1-CCC3"       "R-T1-CCC4"      
+[237] "R-T1-CCH1"       "R-T1-CCH2"       "R-T1-CCH3"       "R-T1-CCH4"      
+[241] "R-T1-CGC1"       "R-T1-CGC2"       "R-T1-CGC3"       "R-T1-CGC4"      
+[245] "R-T1-CGH1"       "R-T1-CGH2"       "R-T1-CGH3"       "R-T1-CGH4"      
+[249] "R-T1-MCC1"       "R-T1-MCC2"       "R-T1-MCC3"       "R-T1-MCC4"      
+[253] "R-T1-MCH1"       "R-T1-MCH2"       "R-T1-MCH3"       "R-T1-MCH4"      
+[257] "R-T1-MGC1"       "R-T1-MGC2"       "R-T1-MGC3"       "R-T1-MGC4"      
+[261] "R-T1-MGH1"       "R-T1-MGH2"       "R-T1-MGH3"       "R-T1-MGH4"      
+[265] "Soil1-1-T0"      "Soil1-2-T0"      "Soil2-1-T0"      "Soil2-2-T0"     
+[269] "Soil3-1-T0"      "Soil3-2-T0"      "Soil4-1-T0"      "Soil4-2-T0"     
+[273] "Soil5-1-T0"      "Soil5-2-T0"     
+[1] "-------------"
+[1] "Dereplicating data"
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CCCR1R1.fastq
+Encountered 16140 unique sequences from 57091 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CCCR2R1.fastq
+Encountered 42689 unique sequences from 113791 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CCCR3R1.fastq
+Encountered 34022 unique sequences from 117798 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CCCR4R1.fastq
+Encountered 1012 unique sequences from 4216 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CCCT1-S1.fastq
+Encountered 44286 unique sequences from 129337 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CCCT1-S2.fastq
+Encountered 39042 unique sequences from 111741 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CCCT1-S3.fastq
+Encountered 58836 unique sequences from 186107 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CCCT1-S4.fastq
+Encountered 6428 unique sequences from 12950 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CCCT1R1.fastq
+Encountered 60199 unique sequences from 261559 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CCCT1R2.fastq
+Encountered 90323 unique sequences from 262844 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CCCT1R3.fastq
+Encountered 72214 unique sequences from 220232 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CCCT1R4.fastq
+Encountered 66097 unique sequences from 187145 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CCHR1R2.fastq
+Encountered 91184 unique sequences from 277739 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CCHR2R1.fastq
+Encountered 81576 unique sequences from 274025 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CCHR3R1.fastq
+Encountered 94879 unique sequences from 291536 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CCHR4R1.fastq
+Encountered 77760 unique sequences from 202459 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CCHT1-S1.fastq
+Encountered 60678 unique sequences from 191519 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CCHT1-S2.fastq
+Encountered 53660 unique sequences from 162275 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CCHT1-S3.fastq
+Encountered 37179 unique sequences from 100840 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CCHT1-S4.fastq
+Encountered 31195 unique sequences from 80173 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CCHT1R1.fastq
+Encountered 40153 unique sequences from 96740 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CCHT1R2.fastq
+Encountered 227160 unique sequences from 809322 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CCHT1R3.fastq
+Encountered 123993 unique sequences from 360331 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CCHT1R4.fastq
+Encountered 55827 unique sequences from 146374 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CGCR1R1.fastq
+Encountered 8871 unique sequences from 17555 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CGCR2R1.fastq
+Encountered 54534 unique sequences from 165718 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CGCR3R1.fastq
+Encountered 8052 unique sequences from 15066 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CGCR4R1.fastq
+Encountered 9053 unique sequences from 18508 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CGCT1-S1.fastq
+Encountered 29376 unique sequences from 76704 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CGCT1-S2.fastq
+Encountered 25142 unique sequences from 70031 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CGCT1-S3.fastq
+Encountered 44314 unique sequences from 135861 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CGCT1-S4.fastq
+Encountered 5367 unique sequences from 11469 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CGCT1R1.fastq
+Encountered 83999 unique sequences from 230645 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CGCT1R2.fastq
+Encountered 95113 unique sequences from 270936 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CGCT1R3.fastq
+Encountered 112304 unique sequences from 338665 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CGCT1R4.fastq
+Encountered 86555 unique sequences from 307442 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CGHT1-S1.fastq
+Encountered 41967 unique sequences from 133100 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CGHT1-S2.fastq
+Encountered 15409 unique sequences from 34529 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CGHT1-S3.fastq
+Encountered 34139 unique sequences from 87017 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CGHT1-S4.fastq
+Encountered 40245 unique sequences from 120793 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CGHT1R1.fastq
+Encountered 75826 unique sequences from 252576 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CGHT1R2.fastq
+Encountered 41390 unique sequences from 100786 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CGHT1R3.fastq
+Encountered 77927 unique sequences from 218099 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/CGHT1R4.fastq
+Encountered 73279 unique sequences from 206856 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-CCC1.fastq
+Encountered 11543 unique sequences from 75856 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-CCC2.fastq
+Encountered 6128 unique sequences from 42616 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-CCC3.fastq
+Encountered 17763 unique sequences from 169577 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-CCC4.fastq
+Encountered 12899 unique sequences from 64203 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-CCH1.fastq
+Encountered 4351 unique sequences from 35573 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-CCH2.fastq
+Encountered 3582 unique sequences from 18334 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-CCH3.fastq
+Encountered 13008 unique sequences from 103506 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-CCH4.fastq
+Encountered 20826 unique sequences from 198655 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-CGC1.fastq
+Encountered 15241 unique sequences from 122978 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-CGC2.fastq
+Encountered 20556 unique sequences from 118665 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-CGC3.fastq
+Encountered 28504 unique sequences from 184523 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-CGC4.fastq
+Encountered 12312 unique sequences from 77397 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-CGH1.fastq
+Encountered 2186 unique sequences from 9358 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-CGH2.fastq
+Encountered 8021 unique sequences from 44244 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-CGH3.fastq
+Encountered 1838 unique sequences from 9200 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-CGH4.fastq
+Encountered 3148 unique sequences from 29244 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-MCC1.fastq
+Encountered 26817 unique sequences from 212355 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-MCC2.fastq
+Encountered 14391 unique sequences from 81827 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-MCC3.fastq
+Encountered 26269 unique sequences from 176440 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-MCC4.fastq
+Encountered 1818 unique sequences from 10036 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-MCH1.fastq
+Encountered 22065 unique sequences from 139271 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-MCH2.fastq
+Encountered 24308 unique sequences from 154632 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-MCH3.fastq
+Encountered 1909 unique sequences from 11712 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-MCH4.fastq
+Encountered 9373 unique sequences from 63615 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-MGC1.fastq
+Encountered 28359 unique sequences from 230355 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-MGC2.fastq
+Encountered 2116 unique sequences from 15267 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-MGC3.fastq
+Encountered 4392 unique sequences from 31891 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-MGC4.fastq
+Encountered 5771 unique sequences from 55638 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-MGH1.fastq
+Encountered 25650 unique sequences from 177928 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-MGH2.fastq
+Encountered 13902 unique sequences from 86203 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-MGH3.fastq
+Encountered 22906 unique sequences from 151479 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T0-MGH4.fastq
+Encountered 10386 unique sequences from 72625 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-CCC1.fastq
+Encountered 11103 unique sequences from 72930 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-CCC2.fastq
+Encountered 33345 unique sequences from 258718 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-CCC3.fastq
+Encountered 21941 unique sequences from 144302 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-CCC4.fastq
+Encountered 29262 unique sequences from 213196 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-CCH1.fastq
+Encountered 33077 unique sequences from 243933 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-CCH2.fastq
+Encountered 10561 unique sequences from 48973 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-CCH3.fastq
+Encountered 30236 unique sequences from 219928 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-CCH4.fastq
+Encountered 29920 unique sequences from 247312 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-CGC1.fastq
+Encountered 1370 unique sequences from 5740 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-CGC2.fastq
+Encountered 8730 unique sequences from 55908 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-CGC3.fastq
+Encountered 7056 unique sequences from 43006 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-CGC4.fastq
+Encountered 22261 unique sequences from 134689 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-CGH1.fastq
+Encountered 4937 unique sequences from 27804 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-CGH2.fastq
+Encountered 27106 unique sequences from 182495 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-CGH3.fastq
+Encountered 37045 unique sequences from 273220 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-CGH4.fastq
+Encountered 4334 unique sequences from 23847 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-MCC1.fastq
+Encountered 15017 unique sequences from 123989 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-MCC2.fastq
+Encountered 18700 unique sequences from 129574 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-MCC3.fastq
+Encountered 17455 unique sequences from 95063 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-MCC4.fastq
+Encountered 8233 unique sequences from 66247 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-MCH1.fastq
+Encountered 22121 unique sequences from 138723 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-MCH2.fastq
+Encountered 26748 unique sequences from 175933 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-MCH3.fastq
+Encountered 703 unique sequences from 2666 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-MCH4.fastq
+Encountered 10635 unique sequences from 74119 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-MGC1.fastq
+Encountered 5884 unique sequences from 37475 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-MGC2.fastq
+Encountered 20768 unique sequences from 144379 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-MGC3.fastq
+Encountered 5101 unique sequences from 25151 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-MGC4.fastq
+Encountered 7604 unique sequences from 42653 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-MGH1.fastq
+Encountered 12905 unique sequences from 95388 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-MGH2.fastq
+Encountered 15175 unique sequences from 89379 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-MGH3.fastq
+Encountered 10449 unique sequences from 72148 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/L-T1-MGH4.fastq
+Encountered 21486 unique sequences from 158414 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MCCR1R1.fastq
+Encountered 55548 unique sequences from 224315 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MCCR2R1.fastq
+Encountered 89379 unique sequences from 239780 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MCCR3R1.fastq
+Encountered 71642 unique sequences from 201074 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MCCR4R1.fastq
+Encountered 105859 unique sequences from 306861 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MCCT1-S1.fastq
+Encountered 46141 unique sequences from 153790 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MCCT1-S2.fastq
+Encountered 65453 unique sequences from 183938 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MCCT1-S3.fastq
+Encountered 4647 unique sequences from 8377 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MCCT1-S4.fastq
+Encountered 4310 unique sequences from 8494 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MCCT1R1.fastq
+Encountered 91571 unique sequences from 287269 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MCCT1R2.fastq
+Encountered 81706 unique sequences from 237607 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MCCT1R3.fastq
+Encountered 101368 unique sequences from 274335 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MCCT1R4.fastq
+Encountered 115514 unique sequences from 314992 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MCHR1R1.fastq
+Encountered 4617 unique sequences from 10252 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MCHR2R1.fastq
+Encountered 49812 unique sequences from 167967 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MCHR3R1.fastq
+Encountered 36631 unique sequences from 117104 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MCHR4R1.fastq
+Encountered 8750 unique sequences from 17557 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MCHT1-S1.fastq
+Encountered 53060 unique sequences from 166432 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MCHT1-S2.fastq
+Encountered 32184 unique sequences from 95328 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MCHT1-S3.fastq
+Encountered 43028 unique sequences from 153820 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MCHT1-S4.fastq
+Encountered 55066 unique sequences from 196249 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MCHT1R1.fastq
+Encountered 125431 unique sequences from 382403 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MCHT1R2.fastq
+Encountered 121765 unique sequences from 358758 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MCHT1R3.fastq
+Encountered 87275 unique sequences from 240525 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MCHT1R4.fastq
+Encountered 83175 unique sequences from 222985 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MGCR1R1.fastq
+Encountered 74501 unique sequences from 243914 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MGCR2R1.fastq
+Encountered 85392 unique sequences from 266826 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MGCR3R1.fastq
+Encountered 54170 unique sequences from 162772 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MGCR4R1.fastq
+Encountered 78425 unique sequences from 240940 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MGCT1-S2.fastq
+Encountered 5172 unique sequences from 11072 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MGCT1-S3.fastq
+Encountered 40084 unique sequences from 112417 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MGCT1-S4-REDO.fastq
+Encountered 36282 unique sequences from 125681 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MGCT1-S4.fastq
+Encountered 23065 unique sequences from 74114 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MGCT1R1.fastq
+Encountered 68118 unique sequences from 210499 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MGCT1R2.fastq
+Encountered 112693 unique sequences from 374266 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MGCT1R3.fastq
+Encountered 76382 unique sequences from 207664 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MGCT1R4.fastq
+Encountered 60956 unique sequences from 176247 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MGHR1R1.fastq
+Encountered 46418 unique sequences from 142886 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MGHR2R1.fastq
+Encountered 44920 unique sequences from 139169 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MGHR2R2.fastq
+Encountered 32759 unique sequences from 87277 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MGHR4R1.fastq
+Encountered 56709 unique sequences from 163336 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MGHT1-S1.fastq
+Encountered 12832 unique sequences from 26816 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MGHT1-S2.fastq
+Encountered 4416 unique sequences from 7156 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MGHT1-S3.fastq
+Encountered 59541 unique sequences from 234708 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MGHT1-S4.fastq
+Encountered 71921 unique sequences from 271067 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MGHT1R1.fastq
+Encountered 77593 unique sequences from 209109 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MGHT1R2.fastq
+Encountered 93700 unique sequences from 263826 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MGHT1R3.fastq
+Encountered 100849 unique sequences from 262104 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/MGHT1R4.fastq
+Encountered 100222 unique sequences from 281313 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool1-D01.fastq
+Encountered 7626 unique sequences from 58316 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool1-D02.fastq
+Encountered 1857 unique sequences from 15381 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool1-D03.fastq
+Encountered 6226 unique sequences from 33793 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool1-D04.fastq
+Encountered 3007 unique sequences from 18585 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool1-D05.fastq
+Encountered 3250 unique sequences from 20232 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool1-D06.fastq
+Encountered 2276 unique sequences from 19627 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool1-D07.fastq
+Encountered 2238 unique sequences from 8965 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool1-D08.fastq
+Encountered 3207 unique sequences from 16271 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool1-P01.fastq
+Encountered 1327 unique sequences from 8028 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool1-P02.fastq
+Encountered 185 unique sequences from 633 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool1-P03.fastq
+Encountered 275 unique sequences from 1041 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool1-P04.fastq
+Encountered 248 unique sequences from 979 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool1-P05.fastq
+Encountered 1656 unique sequences from 9812 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool1-P06.fastq
+Encountered 489 unique sequences from 2243 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool2-D09.fastq
+Encountered 3725 unique sequences from 18751 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool2-D10.fastq
+Encountered 517 unique sequences from 2788 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool2-D11.fastq
+Encountered 2335 unique sequences from 17993 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool2-D12.fastq
+Encountered 294 unique sequences from 1039 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool2-P07.fastq
+Encountered 513 unique sequences from 3000 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool2-P08.fastq
+Encountered 98 unique sequences from 376 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool2-P14.fastq
+Encountered 130 unique sequences from 473 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool3-P11.fastq
+Encountered 149 unique sequences from 612 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool3-P13.fastq
+Encountered 161 unique sequences from 638 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool3-P15.fastq
+Encountered 1603 unique sequences from 9020 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool4-D13.fastq
+Encountered 9 unique sequences from 14 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool4-D14.fastq
+Encountered 12 unique sequences from 21 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool4-D15.fastq
+Encountered 10 unique sequences from 27 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool4-P09.fastq
+Encountered 30 unique sequences from 88 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool4-P10.fastq
+Encountered 34 unique sequences from 144 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool4-P12.fastq
+Encountered 21 unique sequences from 69 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool4-P16.fastq
+Encountered 19 unique sequences from 40 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Neg-Pool4-P17.fastq
+Encountered 11 unique sequences from 27 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Pos-Pool1-D01.fastq
+Encountered 14 unique sequences from 16 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Pos-Pool1-D02.fastq
+Encountered 32822 unique sequences from 311247 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Pos-Pool1-D03.fastq
+Encountered 16766 unique sequences from 141222 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Pos-Pool1-D04.fastq
+Encountered 19278 unique sequences from 176528 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Pos-Pool2-D05-2.fastq
+Encountered 16373 unique sequences from 129579 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Pos-Pool2-D05.fastq
+Encountered 24488 unique sequences from 221912 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Pos-Pool2-D06.fastq
+Encountered 2718 unique sequences from 12983 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Pos-Pool2-D07.fastq
+Encountered 19478 unique sequences from 190163 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Pos-Pool2-D08.fastq
+Encountered 19192 unique sequences from 175099 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Pos-Pool3-D03.fastq
+Encountered 47575 unique sequences from 557597 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Pos-Pool3-D09-2.fastq
+Encountered 29783 unique sequences from 292060 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Pos-Pool3-D11.fastq
+Encountered 9410 unique sequences from 72040 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Pos-Pool4-D02.fastq
+Encountered 3550 unique sequences from 21743 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Pos-Pool4-D05.fastq
+Encountered 8964 unique sequences from 74171 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Pos-Pool4-D06.fastq
+Encountered 21528 unique sequences from 255858 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Pos-Pool4-D09.fastq
+Encountered 13972 unique sequences from 149129 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T0-CCH1.fastq
+Encountered 69217 unique sequences from 292681 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T0-CCH2.fastq
+Encountered 17885 unique sequences from 80714 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T0-CCH3.fastq
+Encountered 38949 unique sequences from 119767 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T0-CCH4.fastq
+Encountered 14999 unique sequences from 42718 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T0-CGC1.fastq
+Encountered 1347 unique sequences from 2955 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T0-CGC2.fastq
+Encountered 16007 unique sequences from 53559 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T0-CGC3.fastq
+Encountered 7200 unique sequences from 21830 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T0-CGC4.fastq
+Encountered 19608 unique sequences from 66236 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T0-CGH1.fastq
+Encountered 29744 unique sequences from 124067 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T0-CGH2.fastq
+Encountered 15845 unique sequences from 46328 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T0-CGH3.fastq
+Encountered 34608 unique sequences from 99956 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T0-CGH4.fastq
+Encountered 72303 unique sequences from 247948 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T0-MCC1.fastq
+Encountered 17886 unique sequences from 86913 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T0-MCC2.fastq
+Encountered 59938 unique sequences from 279502 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T0-MCC3.fastq
+Encountered 24002 unique sequences from 128528 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T0-MCC4.fastq
+Encountered 50020 unique sequences from 183298 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T0-MCH1.fastq
+Encountered 41431 unique sequences from 147940 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T0-MCH2.fastq
+Encountered 21449 unique sequences from 81658 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T0-MCH3.fastq
+Encountered 18668 unique sequences from 65867 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T0-MCH4.fastq
+Encountered 18576 unique sequences from 56847 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T0-MGC1.fastq
+Encountered 32919 unique sequences from 152437 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T0-MGC2.fastq
+Encountered 33208 unique sequences from 119468 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T0-MGC3.fastq
+Encountered 21121 unique sequences from 119907 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T0-MGC4.fastq
+Encountered 34313 unique sequences from 125994 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T0-MGH1.fastq
+Encountered 18092 unique sequences from 73052 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T0-MGH2.fastq
+Encountered 25395 unique sequences from 158835 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T0-MGH3.fastq
+Encountered 41255 unique sequences from 155046 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T0-MGH4.fastq
+Encountered 12070 unique sequences from 43239 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-CCC1.fastq
+Encountered 39475 unique sequences from 141697 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-CCC2.fastq
+Encountered 72791 unique sequences from 245707 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-CCC3.fastq
+Encountered 45480 unique sequences from 137036 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-CCC4.fastq
+Encountered 7647 unique sequences from 23665 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-CCH1.fastq
+Encountered 33455 unique sequences from 141073 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-CCH2.fastq
+Encountered 14734 unique sequences from 50526 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-CCH3.fastq
+Encountered 34793 unique sequences from 106957 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-CCH4.fastq
+Encountered 72869 unique sequences from 270355 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-CGC1.fastq
+Encountered 5029 unique sequences from 12356 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-CGC2.fastq
+Encountered 51866 unique sequences from 160869 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-CGC3.fastq
+Encountered 61344 unique sequences from 180910 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-CGC4.fastq
+Encountered 61273 unique sequences from 223730 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-CGH1.fastq
+Encountered 61628 unique sequences from 269981 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-CGH2.fastq
+Encountered 44054 unique sequences from 134985 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-CGH3.fastq
+Encountered 21081 unique sequences from 80208 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-CGH4.fastq
+Encountered 44735 unique sequences from 136347 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-MCC1.fastq
+Encountered 49297 unique sequences from 186937 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-MCC2.fastq
+Encountered 26928 unique sequences from 119191 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-MCC3.fastq
+Encountered 32514 unique sequences from 89643 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-MCC4.fastq
+Encountered 46349 unique sequences from 150790 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-MCH1.fastq
+Encountered 43636 unique sequences from 145921 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-MCH2.fastq
+Encountered 29012 unique sequences from 76407 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-MCH3.fastq
+Encountered 79839 unique sequences from 275898 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-MCH4.fastq
+Encountered 56898 unique sequences from 192414 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-MGC1.fastq
+Encountered 3471 unique sequences from 10770 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-MGC2.fastq
+Encountered 13320 unique sequences from 48273 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-MGC3.fastq
+Encountered 2625 unique sequences from 7361 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-MGC4.fastq
+Encountered 55758 unique sequences from 266968 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-MGH1.fastq
+Encountered 16949 unique sequences from 61279 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-MGH2.fastq
+Encountered 32224 unique sequences from 145125 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-MGH3.fastq
+Encountered 23038 unique sequences from 63139 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/R-T1-MGH4.fastq
+Encountered 2047 unique sequences from 4689 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Soil1-1-T0.fastq
+Encountered 45714 unique sequences from 153953 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Soil1-2-T0.fastq
+Encountered 41624 unique sequences from 125620 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Soil2-1-T0.fastq
+Encountered 63074 unique sequences from 173395 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Soil2-2-T0.fastq
+Encountered 10266 unique sequences from 18941 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Soil3-1-T0.fastq
+Encountered 11865 unique sequences from 24371 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Soil3-2-T0.fastq
+Encountered 36708 unique sequences from 95103 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Soil4-1-T0.fastq
+Encountered 34941 unique sequences from 105589 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Soil4-2-T0.fastq
+Encountered 8451 unique sequences from 19049 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Soil5-1-T0.fastq
+Encountered 60712 unique sequences from 171771 total sequences read.
+Dereplicating sequence entries in Fastq file: ECDRE_Y0_1_16S_ASV_CAonly_20240501_filtered/Soil5-2-T0.fastq
+Encountered 28443 unique sequences from 75254 total sequences read.
+[1] "-------------"
+[1] "Sample inference"
+[1] "FALSE"
+Initializing error rates to maximum possible estimate.
+selfConsist step 1 ..................................................................................................................................................................................................................................................................................
+   selfConsist step 2
+   selfConsist step 3
+   selfConsist step 4
+   selfConsist step 5
+   selfConsist step 6
+   selfConsist step 7
+   selfConsist step 8
+   selfConsist step 9
+   selfConsist step 10
+Self-consistency loop terminated before convergence.
+There were 11 warnings (use warnings() to see them)
+$names
+  [1] "CCCR1R1"         "CCCR2R1"         "CCCR3R1"         "CCCR4R1"        
+  [5] "CCCT1-S1"        "CCCT1-S2"        "CCCT1-S3"        "CCCT1-S4"       
+  [9] "CCCT1R1"         "CCCT1R2"         "CCCT1R3"         "CCCT1R4"        
+ [13] "CCHR1R2"         "CCHR2R1"         "CCHR3R1"         "CCHR4R1"        
+ [17] "CCHT1-S1"        "CCHT1-S2"        "CCHT1-S3"        "CCHT1-S4"       
+ [21] "CCHT1R1"         "CCHT1R2"         "CCHT1R3"         "CCHT1R4"        
+ [25] "CGCR1R1"         "CGCR2R1"         "CGCR3R1"         "CGCR4R1"        
+ [29] "CGCT1-S1"        "CGCT1-S2"        "CGCT1-S3"        "CGCT1-S4"       
+ [33] "CGCT1R1"         "CGCT1R2"         "CGCT1R3"         "CGCT1R4"        
+ [37] "CGHT1-S1"        "CGHT1-S2"        "CGHT1-S3"        "CGHT1-S4"       
+ [41] "CGHT1R1"         "CGHT1R2"         "CGHT1R3"         "CGHT1R4"        
+ [45] "L-T0-CCC1"       "L-T0-CCC2"       "L-T0-CCC3"       "L-T0-CCC4"      
+ [49] "L-T0-CCH1"       "L-T0-CCH2"       "L-T0-CCH3"       "L-T0-CCH4"      
+ [53] "L-T0-CGC1"       "L-T0-CGC2"       "L-T0-CGC3"       "L-T0-CGC4"      
+ [57] "L-T0-CGH1"       "L-T0-CGH2"       "L-T0-CGH3"       "L-T0-CGH4"      
+ [61] "L-T0-MCC1"       "L-T0-MCC2"       "L-T0-MCC3"       "L-T0-MCC4"      
+ [65] "L-T0-MCH1"       "L-T0-MCH2"       "L-T0-MCH3"       "L-T0-MCH4"      
+ [69] "L-T0-MGC1"       "L-T0-MGC2"       "L-T0-MGC3"       "L-T0-MGC4"      
+ [73] "L-T0-MGH1"       "L-T0-MGH2"       "L-T0-MGH3"       "L-T0-MGH4"      
+ [77] "L-T1-CCC1"       "L-T1-CCC2"       "L-T1-CCC3"       "L-T1-CCC4"      
+ [81] "L-T1-CCH1"       "L-T1-CCH2"       "L-T1-CCH3"       "L-T1-CCH4"      
+ [85] "L-T1-CGC1"       "L-T1-CGC2"       "L-T1-CGC3"       "L-T1-CGC4"      
+ [89] "L-T1-CGH1"       "L-T1-CGH2"       "L-T1-CGH3"       "L-T1-CGH4"      
+ [93] "L-T1-MCC1"       "L-T1-MCC2"       "L-T1-MCC3"       "L-T1-MCC4"      
+ [97] "L-T1-MCH1"       "L-T1-MCH2"       "L-T1-MCH3"       "L-T1-MCH4"      
+[101] "L-T1-MGC1"       "L-T1-MGC2"       "L-T1-MGC3"       "L-T1-MGC4"      
+[105] "L-T1-MGH1"       "L-T1-MGH2"       "L-T1-MGH3"       "L-T1-MGH4"      
+[109] "MCCR1R1"         "MCCR2R1"         "MCCR3R1"         "MCCR4R1"        
+[113] "MCCT1-S1"        "MCCT1-S2"        "MCCT1-S3"        "MCCT1-S4"       
+[117] "MCCT1R1"         "MCCT1R2"         "MCCT1R3"         "MCCT1R4"        
+[121] "MCHR1R1"         "MCHR2R1"         "MCHR3R1"         "MCHR4R1"        
+[125] "MCHT1-S1"        "MCHT1-S2"        "MCHT1-S3"        "MCHT1-S4"       
+[129] "MCHT1R1"         "MCHT1R2"         "MCHT1R3"         "MCHT1R4"        
+[133] "MGCR1R1"         "MGCR2R1"         "MGCR3R1"         "MGCR4R1"        
+[137] "MGCT1-S2"        "MGCT1-S3"        "MGCT1-S4-REDO"   "MGCT1-S4"       
+[141] "MGCT1R1"         "MGCT1R2"         "MGCT1R3"         "MGCT1R4"        
+[145] "MGHR1R1"         "MGHR2R1"         "MGHR2R2"         "MGHR4R1"        
+[149] "MGHT1-S1"        "MGHT1-S2"        "MGHT1-S3"        "MGHT1-S4"       
+[153] "MGHT1R1"         "MGHT1R2"         "MGHT1R3"         "MGHT1R4"        
+[157] "Neg-Pool1-D01"   "Neg-Pool1-D02"   "Neg-Pool1-D03"   "Neg-Pool1-D04"  
+[161] "Neg-Pool1-D05"   "Neg-Pool1-D06"   "Neg-Pool1-D07"   "Neg-Pool1-D08"  
+[165] "Neg-Pool1-P01"   "Neg-Pool1-P02"   "Neg-Pool1-P03"   "Neg-Pool1-P04"  
+[169] "Neg-Pool1-P05"   "Neg-Pool1-P06"   "Neg-Pool2-D09"   "Neg-Pool2-D10"  
+[173] "Neg-Pool2-D11"   "Neg-Pool2-D12"   "Neg-Pool2-P07"   "Neg-Pool2-P08"  
+[177] "Neg-Pool2-P14"   "Neg-Pool3-P11"   "Neg-Pool3-P13"   "Neg-Pool3-P15"  
+[181] "Neg-Pool4-D13"   "Neg-Pool4-D14"   "Neg-Pool4-D15"   "Neg-Pool4-P09"  
+[185] "Neg-Pool4-P10"   "Neg-Pool4-P12"   "Neg-Pool4-P16"   "Neg-Pool4-P17"  
+[189] "Pos-Pool1-D01"   "Pos-Pool1-D02"   "Pos-Pool1-D03"   "Pos-Pool1-D04"  
+[193] "Pos-Pool2-D05-2" "Pos-Pool2-D05"   "Pos-Pool2-D06"   "Pos-Pool2-D07"  
+[197] "Pos-Pool2-D08"   "Pos-Pool3-D03"   "Pos-Pool3-D09-2" "Pos-Pool3-D11"  
+[201] "Pos-Pool4-D02"   "Pos-Pool4-D05"   "Pos-Pool4-D06"   "Pos-Pool4-D09"  
+[205] "R-T0-CCH1"       "R-T0-CCH2"       "R-T0-CCH3"       "R-T0-CCH4"      
+[209] "R-T0-CGC1"       "R-T0-CGC2"       "R-T0-CGC3"       "R-T0-CGC4"      
+[213] "R-T0-CGH1"       "R-T0-CGH2"       "R-T0-CGH3"       "R-T0-CGH4"      
+[217] "R-T0-MCC1"       "R-T0-MCC2"       "R-T0-MCC3"       "R-T0-MCC4"      
+[221] "R-T0-MCH1"       "R-T0-MCH2"       "R-T0-MCH3"       "R-T0-MCH4"      
+[225] "R-T0-MGC1"       "R-T0-MGC2"       "R-T0-MGC3"       "R-T0-MGC4"      
+[229] "R-T0-MGH1"       "R-T0-MGH2"       "R-T0-MGH3"       "R-T0-MGH4"      
+[233] "R-T1-CCC1"       "R-T1-CCC2"       "R-T1-CCC3"       "R-T1-CCC4"      
+[237] "R-T1-CCH1"       "R-T1-CCH2"       "R-T1-CCH3"       "R-T1-CCH4"      
+[241] "R-T1-CGC1"       "R-T1-CGC2"       "R-T1-CGC3"       "R-T1-CGC4"      
+[245] "R-T1-CGH1"       "R-T1-CGH2"       "R-T1-CGH3"       "R-T1-CGH4"      
+[249] "R-T1-MCC1"       "R-T1-MCC2"       "R-T1-MCC3"       "R-T1-MCC4"      
+[253] "R-T1-MCH1"       "R-T1-MCH2"       "R-T1-MCH3"       "R-T1-MCH4"      
+[257] "R-T1-MGC1"       "R-T1-MGC2"       "R-T1-MGC3"       "R-T1-MGC4"      
+[261] "R-T1-MGH1"       "R-T1-MGH2"       "R-T1-MGH3"       "R-T1-MGH4"      
+[265] "Soil1-1-T0"      "Soil1-2-T0"      "Soil2-1-T0"      "Soil2-2-T0"     
+[269] "Soil3-1-T0"      "Soil3-2-T0"      "Soil4-1-T0"      "Soil4-2-T0"     
+[273] "Soil5-1-T0"      "Soil5-2-T0"     
+
+Identified 26170 bimeras out of 94595 input sequences.
