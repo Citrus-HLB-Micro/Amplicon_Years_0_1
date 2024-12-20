@@ -1,0 +1,126 @@
+[05/02/24 10:57:33]: /opt/linux/rocky/8.x/x86_64/pkgs/amptk/1.6/bin/amptk dada2 -i ECDRE_Y0_1_ASV_CA_only_20240501.demux.fq.gz -o ECDRE_Y0_1_ASV_CA_only_20240501 --uchime_ref ITS --usearch usearch9 -e 0.9 --cpus 48
+
+[05/02/24 10:57:33]: OS: Rocky Linux 8.8, 64 cores, ~ 528 GB RAM. Python: 3.10.0
+[05/02/24 10:57:33]: Python Modules: numpy v1.24.2, pandas v1.5.3, matplotlib v3.7.1, psutil v5.9.4, natsort v8.3.1, biopython v1.81, edlib v1.3.9, biom-format v2.1.14
+[05/02/24 10:57:33]: AMPtk v1.6.0, VSEARCH v2.22.1
+[05/02/24 10:57:34]: R v4.2.2; DADA2 v1.26.0
+[05/02/24 10:57:34]: Loading FASTQ Records
+[05/02/24 10:57:34]: pigz --decompress -c -p 48 /bigdata/stajichlab/shared/projects/ECDRE/Amplicon/Analysis/Year0_1/CA_only/ITS/ECDRE_Y0_1_ASV_CA_only_20240501.demux.fq.gz
+[05/02/24 11:00:05]: vsearch --fastq_filter /bigdata/stajichlab/shared/projects/ECDRE/Amplicon/Analysis/Year0_1/CA_only/ITS/ECDRE_Y0_1_ASV_CA_only_20240501.cleaned_input.fq --fastq_qmax 55 --fastaout ECDRE_Y0_1_ASV_CA_only_20240501.original.fa --threads 48
+[05/02/24 11:08:40]: WARNING: The fastq_filter command does not support multithreading.
+Only 1 thread used.
+vsearch v2.22.1_linux_x86_64, 503.8GB RAM, 64 cores
+https://github.com/torognes/vsearch
+
+Reading input file 100%
+37380205 sequences kept (of which 0 truncated), 0 sequences discarded.
+
+[05/02/24 11:09:19]: 37,380,205 reads (14.9 GB)
+[05/02/24 11:09:19]: Quality Filtering, expected errors < 0.9
+[05/02/24 11:09:19]: vsearch --fastq_filter ECDRE_Y0_1_ASV_CA_only_20240501.cleaned_input.fq --fastq_maxee 0.9 --fastqout ECDRE_Y0_1_ASV_CA_only_20240501.qual-filtered.fq --fastq_qmax 55 --fastq_maxns 0 --threads 48
+[05/02/24 11:17:35]: WARNING: The fastq_filter command does not support multithreading.
+Only 1 thread used.
+vsearch v2.22.1_linux_x86_64, 503.8GB RAM, 64 cores
+https://github.com/torognes/vsearch
+
+Reading input file 100%
+35867685 sequences kept (of which 0 truncated), 1512520 sequences discarded.
+
+[05/02/24 11:18:02]: 35,867,685 reads passed
+[05/02/24 11:18:02]: Splitting FASTQ file by Sample into individual files
+[05/02/24 11:56:42]: Dropping Pos-Pool4-D10.fastq, Neg-Pool2-D12.fastq, Pos-Pool1-D01.fastq, Neg-Pool3-P11.fastq, Pos-Pool2-D11-3.fastq, Pos-Pool3-D11-4.fastq as fewer than 10 reads
+[05/02/24 11:56:42]: Running DADA2 pipeline on each sample
+[05/02/24 11:56:42]: Rscript --vanilla /bigdata/operations/pkgadmin/opt/linux/centos/8.x/x86_64/pkgs/amptk/1.6/lib/python3.10/site-packages/amptk/dada2_pipeline_nofilt.R ECDRE_Y0_1_ASV_CA_only_20240501_filtered ECDRE_Y0_1_ASV_CA_only_20240501.dada2.csv ion FALSE 48 consensus
+[05/02/24 13:31:32]: 17,786 total amplicon sequence variants (ASVs)
+[05/02/24 13:31:32]: 2,471 denovo chimeras removed
+[05/02/24 13:31:32]: 15,315 valid ASVs
+[05/02/24 13:31:32]: Chimera Filtering (VSEARCH) using ITS DB
+[05/02/24 13:31:32]: vsearch --mindiv 1.0 --uchime_ref ECDRE_Y0_1_ASV_CA_only_20240501.otus.tmp --db /bigdata/operations/pkgadmin/opt/linux/centos/8.x/x86_64/pkgs/amptk/1.6/lib/python3.10/site-packages/amptk/DB/ITS.extracted.fa --nonchimeras ECDRE_Y0_1_ASV_CA_only_20240501.ASVs.fa --threads 48
+[05/02/24 13:33:27]: vsearch v2.22.1_linux_x86_64, 503.8GB RAM, 64 cores
+https://github.com/torognes/vsearch
+
+Reading file /bigdata/operations/pkgadmin/opt/linux/centos/8.x/x86_64/pkgs/amptk/1.6/lib/python3.10/site-packages/amptk/DB/ITS.extracted.fa 100%
+1376309086 nt in 4133329 seqs, min 100, max 6778, avg 333
+Masking 100%
+Counting k-mers 100%
+Creating k-mer index 100%
+Detecting chimeras 100%
+Found 929 (6.1%) chimeras, 14367 (93.8%) non-chimeras,
+and 19 (0.1%) borderline sequences in 15315 unique sequences.
+Taking abundance information into account, this corresponds to
+929 (6.1%) chimeras, 14367 (93.8%) non-chimeras,
+and 19 (0.1%) borderline sequences in 15315 total sequences.
+
+[05/02/24 13:33:27]: 14,367 ASVs passed, 948 ref chimeras removed
+[05/02/24 13:33:27]: Validating ASV orientation
+[05/02/24 13:33:27]: vsearch --usearch_global ECDRE_Y0_1_ASV_CA_only_20240501.ASVs.fa.bak --db ECDRE_Y0_1_ASV_CA_only_20240501.ASVs.fa.bak --self --id 0.95 --strand both --userout orient-map.txt --userfields query+target+qstrand+id
+[05/02/24 13:33:27]: vsearch v2.22.1_linux_x86_64, 503.8GB RAM, 64 cores
+https://github.com/torognes/vsearch
+
+Reading file ECDRE_Y0_1_ASV_CA_only_20240501.ASVs.fa.bak 100%
+3131174 nt in 14367 seqs, min 101, max 250, avg 218
+Masking 100%
+Counting k-mers 100%
+Creating k-mer index 100%
+Searching 100%
+Matching unique query sequences: 10519 of 14367 (73.22%)
+
+[05/02/24 13:33:27]: Dropping 259 OTUs: ASV3734, ASV3737, ASV3989, ASV3992, ASV4106, ASV4109, ASV4144, ASV4274, ASV4300, ASV4302, ASV4329, ASV4371, ASV4407, ASV4510, ASV4568, ASV4644, ASV4697, ASV4780, ASV4782, ASV4826, ASV4827, ASV4831, ASV4875, ASV4876, ASV4877, ASV4919, ASV4957, ASV4991, ASV4993, ASV4994, ASV5053, ASV5054, ASV5058, ASV5101, ASV5162, ASV5215, ASV5319, ASV5371, ASV5423, ASV5479, ASV5533, ASV5534, ASV5539, ASV5540, ASV5653, ASV5710, ASV5714, ASV5770, ASV5771, ASV5772, ASV5845, ASV5848, ASV6073, ASV6078, ASV6163, ASV6243, ASV6244, ASV6245, ASV6246, ASV6249, ASV6251, ASV6332, ASV6496, ASV6498, ASV6499, ASV6500, ASV6501, ASV6503, ASV6608, ASV6609, ASV6707, ASV6708, ASV6809, ASV6911, ASV6913, ASV7104, ASV7105, ASV7106, ASV7107, ASV7108, ASV7109, ASV7110, ASV7111, ASV7112, ASV7228, ASV7229, ASV7235, ASV7237, ASV7485, ASV7486, ASV7489, ASV7492, ASV7493, ASV7497, ASV7499, ASV7636, ASV7637, ASV7639, ASV7640, ASV7794, ASV7795, ASV7796, ASV7798, ASV7800, ASV7803, ASV7805, ASV7969, ASV7973, ASV7974, ASV7975, ASV7976, ASV7977, ASV7981, ASV7982, ASV7983, ASV7984, ASV8135, ASV8136, ASV8137, ASV8138, ASV8140, ASV8146, ASV8147, ASV8314, ASV8317, ASV8320, ASV8321, ASV8322, ASV8323, ASV8325, ASV8327, ASV8328, ASV8330, ASV8491, ASV8492, ASV8493, ASV8495, ASV8496, ASV8498, ASV8499, ASV8500, ASV8502, ASV8714, ASV8715, ASV8716, ASV8719, ASV8720, ASV8721, ASV8726, ASV8727, ASV8728, ASV8729, ASV8731, ASV8935, ASV8937, ASV8940, ASV8941, ASV8942, ASV8948, ASV8949, ASV8954, ASV9175, ASV9176, ASV9177, ASV9178, ASV9179, ASV9180, ASV9181, ASV9183, ASV9187, ASV9188, ASV9192, ASV9194, ASV9198, ASV9199, ASV9425, ASV9426, ASV9427, ASV9428, ASV9431, ASV9433, ASV9434, ASV9436, ASV9604, ASV9724, ASV9725, ASV9726, ASV9728, ASV9729, ASV9731, ASV9732, ASV9733, ASV9741, ASV9745, ASV9750, ASV9752, ASV9754, ASV10077, ASV10078, ASV10081, ASV10082, ASV10083, ASV10085, ASV10086, ASV10087, ASV10088, ASV10089, ASV10092, ASV10448, ASV10449, ASV10451, ASV10453, ASV10454, ASV10455, ASV10457, ASV10461, ASV10463, ASV10467, ASV10924, ASV10925, ASV10928, ASV10929, ASV10931, ASV10938, ASV10940, ASV11007, ASV11458, ASV11459, ASV11460, ASV11461, ASV11466, ASV11467, ASV11469, ASV12135, ASV12137, ASV12138, ASV12142, ASV12143, ASV12145, ASV12147, ASV12999, ASV13001, ASV13004, ASV13005, ASV13006, ASV13007, ASV13008, ASV13009, ASV13010, ASV13433, ASV14002, ASV14003, ASV14004, ASV14005, ASV14006, ASV14796, ASV15125, ASV15126, ASV15315
+[05/02/24 13:33:28]: 14,108 ASVs validated (259 dropped)
+[05/02/24 13:33:28]: Mapping reads to DADA2 ASVs
+[05/02/24 13:33:28]: vsearch --usearch_global ECDRE_Y0_1_ASV_CA_only_20240501.original.fa --db ECDRE_Y0_1_ASV_CA_only_20240501.ASVs.fa --id 0.97 --uc ECDRE_Y0_1_ASV_CA_only_20240501.dada2.map.uc --strand plus --otutabout ECDRE_Y0_1_ASV_CA_only_20240501.otu_table.txt --threads 48
+[05/02/24 13:54:30]: vsearch v2.22.1_linux_x86_64, 503.8GB RAM, 64 cores
+https://github.com/torognes/vsearch
+
+Reading file ECDRE_Y0_1_ASV_CA_only_20240501.ASVs.fa 100%
+3066573 nt in 14108 seqs, min 103, max 250, avg 217
+Masking 100%
+Counting k-mers 100%
+Creating k-mer index 100%
+Searching 100%
+Matching unique query sequences: 33713589 of 37380205 (90.19%)
+Writing OTU table (classic) 100%
+
+[05/02/24 13:54:36]: 33,713,589 reads mapped to ASVs (90%)
+[05/02/24 13:54:36]: Clustering ASVs at 97% to generate biological OTUs
+[05/02/24 13:54:37]: vsearch --cluster_smallmem ECDRE_Y0_1_ASV_CA_only_20240501.ASVs.fa --centroids ECDRE_Y0_1_ASV_CA_only_20240501.cluster.otus.fa --id 0.97 --strand plus --relabel OTU --qmask none --usersort --threads 48
+[05/02/24 13:54:38]: vsearch v2.22.1_linux_x86_64, 503.8GB RAM, 64 cores
+https://github.com/torognes/vsearch
+
+Reading file ECDRE_Y0_1_ASV_CA_only_20240501.ASVs.fa 100%
+3066573 nt in 14108 seqs, min 103, max 250, avg 217
+Counting k-mers 100%
+Clustering 100%
+Sorting clusters 100%
+Writing clusters 100%
+Clusters: 7654 Size min 1, max 50, avg 1.8
+Singletons: 5034, 35.7% of seqs, 65.8% of clusters
+
+[05/02/24 13:54:38]: 7,654 OTUs generated
+[05/02/24 13:54:38]: vsearch --usearch_global ECDRE_Y0_1_ASV_CA_only_20240501.ASVs.fa --db ECDRE_Y0_1_ASV_CA_only_20240501.cluster.otus.fa --id 0.97 --uc ECDRE_Y0_1_ASV_CA_only_20240501.ASV_map.uc --strand plus --threads 48
+[05/02/24 13:54:39]: vsearch v2.22.1_linux_x86_64, 503.8GB RAM, 64 cores
+https://github.com/torognes/vsearch
+
+Reading file ECDRE_Y0_1_ASV_CA_only_20240501.cluster.otus.fa 100%
+1659021 nt in 7654 seqs, min 103, max 250, avg 217
+Masking 100%
+Counting k-mers 100%
+Creating k-mer index 100%
+Searching 100%
+Matching unique query sequences: 14101 of 14108 (99.95%)
+
+[05/02/24 13:54:39]: Mapping reads to OTUs
+[05/02/24 13:54:39]: vsearch --usearch_global ECDRE_Y0_1_ASV_CA_only_20240501.original.fa --db ECDRE_Y0_1_ASV_CA_only_20240501.cluster.otus.fa --id 0.97 --uc ECDRE_Y0_1_ASV_CA_only_20240501.map.uc --strand plus --otutabout ECDRE_Y0_1_ASV_CA_only_20240501.cluster.otu_table.txt --threads 48
+[05/02/24 14:13:43]: vsearch v2.22.1_linux_x86_64, 503.8GB RAM, 64 cores
+https://github.com/torognes/vsearch
+
+Reading file ECDRE_Y0_1_ASV_CA_only_20240501.cluster.otus.fa 100%
+1659021 nt in 7654 seqs, min 103, max 250, avg 217
+Masking 100%
+Counting k-mers 100%
+Creating k-mer index 100%
+Searching 100%
+Matching unique query sequences: 28968485 of 37380205 (77.50%)
+Writing OTU table (classic) 100%
+
+[05/02/24 14:13:50]: 28,968,485 reads mapped to OTUs (77%)
